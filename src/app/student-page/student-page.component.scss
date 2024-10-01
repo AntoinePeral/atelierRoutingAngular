@@ -1,0 +1,25 @@
+
+/* Styles pour la page d'étudiant */
+.student-container {
+  margin-top: 20px; /* Espacement supérieur */
+  padding: 20px; /* Espacement interne */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 8px; /* Bords arrondis */
+  background-color: #f1f1f1; /* Couleur de fond légèrement différente */
+}
+
+.student-container h2 {
+  font-size: 20px; /* Taille de la police */
+  margin-bottom: 10px; /* Espacement inférieur */
+}
+
+/* Styles pour le lien de réinitialisation */
+a {
+  color: #007bff; /* Couleur du lien */
+  text-decoration: none; /* Pas de soulignement */
+  font-weight: bold; /* Texte en gras */
+}
+
+a:hover {
+  text-decoration: underline; /* Soulignement au survol */
+}

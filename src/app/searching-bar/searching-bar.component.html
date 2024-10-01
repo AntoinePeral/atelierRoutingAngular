@@ -1,0 +1,35 @@
+<p>searching-bar works!</p>
+<h1>Search student</h1>
+<div>
+  <form (ngSubmit)="searchForm.valid && onSubmit()" #searchForm="ngForm">
+    <div class="validators">
+      Le formulaire est-il soumis ? {{searchForm.submitted}}
+    </div>
+    <div class="validators">
+      Le formulaire est-il valide ? {{searchForm.valid}}
+    </div>
+    <div class="validators">
+      Le formulaire est-il Invalide ? {{searchForm.invalid}}
+    </div>
+
+    <input type="text" name="studentName" [(ngModel)]="studentName" #studentModel="ngModel" placeholder="Entrez le nom de l'élève" required>
+    @if(studentModel.errors && searchForm.submitted){
+      <div class="validators">
+        @if (studentModel.errors['required']) {
+          <span>Le nom est requis</span>
+        }
+      </div>
+    }
+    <button type="submit">Rechercher</button>
+  </form>
+</div>
+
+<!-- <div>
+  <form>
+    <input type="text" name="studentName" [(ngModel)]="studentName" placeholder="Entrez le nom de l'élève" required>
+    <button type="submit" [routerLink]="['/wcs',studentName]" routerLinkActive="router-link-active">Rechercher</button>
+  </form>
+  
+  <router-outlet />
+</div>
+ -->
